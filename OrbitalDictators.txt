@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbital Dictators - Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/icon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="banner-container">
+            <img src="images/banner.png" alt="Orbital Dictators Banner" class="banner">
+            <img src="images/icon.png" alt="Company Icon" class="icon-overlay">
+        </div>
+    </header>
+
+    <main>
+        <section id="games">
+            <h2>Our Games</h2>
+            <div class="game">
+    <div class="game-thumbnail">
+        <img src="images/game1.png" alt="Galactic Conquest">
+    </div>
+    <h3>Galactic Conquest</h3>
+    <p>Build your empire across the stars</p>
+    <!-- APK download with device detection -->
+    <a href="downloads/galactic-conquest.apk" 
+       class="download-btn" 
+       download="GalacticConquest.apk"
+       onclick="return checkDevice()">
+       Download APK
+    </a>
+    <p class="android-only">(Android only)</p>
+</div>
+            <div class="game">
+    <div class="game-thumbnail">
+        <img src="images/game1.png" alt="Galactic Conquest">
+    </div>
+    <h3>Galactic Conquest</h3>
+    <p>Build your empire across the stars</p>
+    <!-- APK download with device detection -->
+    <a href="downloads/galactic-conquest.apk" 
+       class="download-btn" 
+       download="GalacticConquest.apk"
+       onclick="return checkDevice()">
+       Download APK
+    </a>
+    <p class="android-only">(Android only)</p>
+</div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.instagram.com/your-instagram"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="https://www.tiktok.com/@your-tiktok"><img src="images/tiktok.png" alt="TikTok"></a>
+        </div>
+        <p>&copy; 2025 Orbital Dictators. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("body", {
+    "particles": {
+      "number": { "value": 80 },
+      "color": { "value": "#FF2400" },
+      "shape": { "type": "circle" },
+      "size": { "value": 3, "random": true },
+      "move": { 
+        "enable": true, 
+        "speed": 1, 
+        "direction": "none", 
+        "out_mode": "bounce" 
+      }
+    }
+  });
+</script>
+
+<div id="apk-warning">
+    ⚠️ Remember to enable "Unknown Sources" in Android Settings before installing APKs
+</div>
+
+</body>
+</html>

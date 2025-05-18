@@ -1,0 +1,158 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Loading animation
+    window.addEventListener('load', function() {
+        const loader = document.querySelector('.loader');
+        setTimeout(() => {
+            loader.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling after load
+        }, 1000);
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // Update URL without jumping
+                if (history.pushState) {
+                    history.pushState(null, null, targetId);
+                } else {
+                    location.hash = targetId;
+                }
+            }
+        });
+    });
+
+    // Back to top button
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+    
+    backToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Game card animations
+    const games = document.querySelectorAll('.game');
+    
+    games.forEach((game, index) => {
+        game.style.opacity = '0';
+        game.style.transform = 'translateY(30px)';
+        game.style.transition = 'all 0.5s ease-out';
+        
+        setTimeout(() => {
+            game.style.opacity = '1';
+            game.style.transform = 'translateY(0)';
+        }, 200 * index);
+    });
+
+    // Social media link hover effects
+    const socialLinks = document.querySelectorAll('.social-links a');
+    
+    socialLinks.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            link.style.transform = 'scale(1.2)';
+        });
+        
+        link.addEventListener('mouseleave', () => {
+            link.style.transform = 'scale(1)';
+        });
+    });// ===== Auto-Play Trailers =====
+document.querySelectorAll('.game').forEach(game => {
+    const trailer = document.createElement('video');
+    trailer.className = 'game-trailer';
+    trailer.muted = true;
+    trailer.loop = true;
+    trailer.innerHTML = `<source src="trailers/${game.querySelector('h3').textContent.toLowerCase().replace(' ', '-')}.mp4" type="video/mp4">`;
+    game.insertBefore(trailer, game.firstChild);
+    
+    game.addEventListener('mouseenter', () => trailer.play());
+    game.addEventListener('mouseleave', () => trailer.pause());
+});
+
+// ===== Typewriter Effect =====
+const gamesHeader = document.querySelector('#games h2');
+const originalText = gamesHeader.textContent;
+gamesHeader.innerHTML = '';
+gamesHeader.classList.add('typewriter');
+
+let i = 0;
+function typeWriter() {
+    if (i < originalText.length) {
+        gamesHeader.textContent += originalText.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
+    } else {
+        gamesHeader.classList.remove('typewriter');
+    }
+}
+setTimeout(typeWriter, 1000); // Delay start
+
+// ===== Tilt Effect =====
+document.querySelectorAll('.game').forEach(game => {
+    game.addEventListener('mousemove', (e) => {
+        const rect = game.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const tiltX = (y - centerY) / 20;
+        const tiltY = (centerX - x) / 20;
+        
+        game.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+    });
+    
+    game.addEventListener('mouseleave', () => {
+        game.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+    });
+});
+
+// Device detection and warning
+function checkDevice() {
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    
+    if (isIOS) {
+        alert("This game is for Android devices only. iOS users cannot install APK files.");
+        return false;
+    }
+    
+    if (!isAndroid) {
+        if (confirm("You're on a desktop. APK files are for Android devices. Download anyway?")) {
+            return true;
+        }
+        return false;
+    }
+    
+    return true;
+}
+
+// Add file size info dynamically
+document.querySelectorAll('.download-btn').forEach(btn => {
+    fetch(btn.href)
+        .then(res => res.blob())
+        .then(blob => {
+            const sizeMB = (blob.size / (1024*1024)).toFixed(1);
+            btn.innerHTML += ` <span class="file-size">(${sizeMB} MB)</span>`;
+        });
+});
+});
