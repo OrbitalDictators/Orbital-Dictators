@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="10v10assets/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10v10: WAR OF SURVIVAL | Orbital Dictators</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0d0d0d;
+            --accent-red: #ff3333;
+            --text-light: #e6e6e6;
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--accent-red);
+        }
+        h1, h2 {
+            color: var(--accent-red);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        h1 { font-size: 2.5rem; }
+        h2 { 
+            font-size: 1.8rem;
+            border-bottom: 1px solid var(--accent-red);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .btn-neon {
+            background-color: var(--bg-dark);
+            color: var(--accent-red);
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            padding: 12px 30px;
+            border: 2px solid var(--accent-red);
+            border-radius: 0;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(255, 51, 51, 0.3);
+        }
+        .btn-neon:hover {
+            background-color: var(--accent-red);
+            color: #000;
+            box-shadow: 0 0 20px rgba(255, 51, 51, 0.7);
+        }
+        .screenshot-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .screenshot-gallery img {
+            width: 100%;
+            max-width: 300px;
+            border: 2px solid var(--accent-red);
+            transition: transform 0.3s;
+        }
+        .screenshot-gallery img:hover {
+            transform: scale(1.05);
+        }
+        .download-counter {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+        .download-counter span {
+            color: var(--accent-red);
+            font-weight: 700;
+        }
+        .story-section, .whats-new-section {
+            margin: 40px 0;
+        }
+        .update-card {
+            background: rgba(255, 51, 51, 0.1);
+            border-left: 4px solid var(--accent-red);
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .update-card h3 {
+            color: var(--accent-red);
+            margin-top: 0;
+        }
+        small {
+            font-size: 1rem;
+            opacity: 0.8;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>10v10: WAR OF SURVIVAL</h1>
+            <p>A tactical squad shooter where every bullet counts...</p>
+            <a href="https://drive.google.com/file/d/YOUR_FILE_ID_3/view" class="btn-neon" target="_blank">DOWNLOAD APK</a>
+            <div class="download-counter">Total Downloads: <span id="downloadCount">2,589</span></div>
+        </header>
+
+        <!-- Story Section -->
+        <section class="story-section">
+            <h2>THE STORY</h2>
+            <p>In 2045, elite squads battle for control of orbital drop zones. 
+            You command a 10-man team in high-stakes tactical warfare. 
+            Outgun, outflank, and outlast the enemy in destructible urban environments. 
+            Extract the payload or eliminate all opposition - victory has no rules.</p>
+            
+            <div class="screenshot-gallery">
+                <img src="https://images.unsplash.com/photo-1543092587-d8b8feaf40cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Tactical Squad">
+                <img src="https://images.unsplash.com/photo-1509358271058-acd22cc93898?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Urban Warfare">
+            </div>
+        </section>
+
+        <!-- Gameplay Screenshots -->
+        <section>
+            <h2>GAMEPLAY</h2>
+            <div class="screenshot-gallery">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Weapon Customization">
+                <img src="https://images.unsplash.com/photo-1585493859783-650a20b7c922?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Combat Action">
+                <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Destructible Environment">
+            </div>
+        </section>
+
+        <!-- Update Section -->
+        <section class="whats-new-section">
+            <h2>LATEST UPDATE <small id="currentDate"></small></h2>
+            <div class="update-card">
+                <h3>Version 2.1.0 - Tactical Update</h3>
+                <ul>
+                    <li>New map: "Ruins of Berlin" added</li>
+                    <li>5 new weapons including plasma rifle</li>
+                    <li>Improved squad AI commands</li>
+                    <li>Fixed revive system bug</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Development Journey -->
+        <section>
+            <h2>DEVELOPMENT JOURNEY</h2>
+            <div class="screenshot-gallery">
+                <img src="https://images.unsplash.com/photo-1600861195091-690c92f1d2cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Level Design">
+                <img src="https://images.unsplash.com/photo-1581092921461-39b2f2a8b4dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Weapon Testing">
+                <img src="https://images.unsplash.com/photo-1581093057305-1cb5a0ed9a7f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Beta Testing">
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Auto-update date
+        document.getElementById('currentDate').textContent = '| ' + new Date().toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'short', 
+            day: 'numeric' 
+        });
+        
+        // Download counter
+        let count = 2589;
+        document.getElementById('downloadCount').textContent = count.toLocaleString();
+    </script>
+</body>
+</html>

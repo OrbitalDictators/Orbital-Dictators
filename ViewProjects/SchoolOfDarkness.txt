@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link rel="icon" href="10v10assets/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCHOOL OF DARKNESS | Orbital Dictators</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0d0d0d;
+            --accent-red: #ff3333;
+            --text-light: #e6e6e6;
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--accent-red);
+        }
+        h1, h2 {
+            color: var(--accent-red);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        h1 { font-size: 2.5rem; }
+        h2 { 
+            font-size: 1.8rem;
+            border-bottom: 1px solid var(--accent-red);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .btn-neon {
+            background-color: var(--bg-dark);
+            color: var(--accent-red);
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            padding: 12px 30px;
+            border: 2px solid var(--accent-red);
+            border-radius: 0;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(255, 51, 51, 0.3);
+        }
+        .btn-neon:hover {
+            background-color: var(--accent-red);
+            color: #000;
+            box-shadow: 0 0 20px rgba(255, 51, 51, 0.7);
+        }
+        .screenshot-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .screenshot-gallery img {
+            width: 100%;
+            max-width: 300px;
+            border: 2px solid var(--accent-red);
+            transition: transform 0.3s;
+        }
+        .screenshot-gallery img:hover {
+            transform: scale(1.05);
+        }
+        .download-counter {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+        .download-counter span {
+            color: var(--accent-red);
+            font-weight: 700;
+        }
+        .story-section, .whats-new-section {
+            margin: 40px 0;
+        }
+        .update-card {
+            background: rgba(255, 51, 51, 0.1);
+            border-left: 4px solid var(--accent-red);
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .update-date {
+            color: var(--accent-red);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SCHOOL OF DARKNESS</h1>
+            <p>A survival horror game where the school corridors hide unspeakable horrors...</p>
+            <a href="https://drive.google.com/file/d/YOUR_FILE_ID_3/view" class="btn-neon" target="_blank">DOWNLOAD APK</a>
+            <div class="download-counter">Total Downloads: <span id="downloadCount">1,247</span></div>
+        </header>
+
+        <!-- Story Section -->
+        <section class="story-section">
+            <h2>THE STORY</h2>
+            <p>You play as Alex, a student trapped overnight in Blackwood High School after detention. 
+            The school transforms at midnight, revealing its dark history of occult experiments. 
+            Now, former students - twisted into monstrous entities - roam the halls. 
+            Your goal: Solve the mystery of "The Principal's Ritual" before dawn... or become one of them.</p>
+            
+            <div class="screenshot-gallery">
+                <img src="https://images.unsplash.com/photo-1608889825205-eebdb9fc5806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Creepy School Hallway">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Dark Ritual Symbol">
+            </div>
+        </section>
+
+        <!-- Gameplay Screenshots -->
+        <section>
+            <h2>GAMEPLAY</h2>
+            <div class="screenshot-gallery">
+                <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="First-Person View">
+                <img src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Monster Encounter">
+                <img src="https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Puzzle Solving">
+            </div>
+        </section>
+
+      <!-- REPLACE THE ENTIRE "WHAT'S NEW" SECTION WITH THIS: -->
+<section class="whats-new-section">
+    <h2>LATEST UPDATE <small id="currentDate"></small></h2>
+    
+    <div class="update-card">
+        <!-- EDIT ONLY THIS PART WHEN UPDATING -->
+        <h3>Version 1.2.1 - Hotfix</h3>
+        <ul>
+            <li>Fixed crash in Chemistry Lab puzzle</li>
+            <li>Added brightness slider in Settings</li>
+            <li>Reduced APK size by 15%</li>
+            <!-- Add/remove list items as needed -->
+        </ul>
+    </div>
+</section>
+
+<script>
+    // Auto-updates the "Last Updated" date (no need to edit)
+    document.getElementById('currentDate').textContent = '| ' + new Date().toLocaleDateString('en-US', { 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric' 
+    });
+</script>
+
+        <!-- Development Journey -->
+        <section>
+            <h2>DEVELOPMENT JOURNEY</h2>
+            <div class="screenshot-gallery">
+                <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Concept Art">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Coding Session">
+                <img src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Beta Testing">
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Simple download counter (replace with server-side code later)
+        let count = 1247;
+        document.getElementById('downloadCount').textContent = count.toLocaleString();
+    </script>
+</body>
+</html>
