@@ -7,31 +7,34 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
-    
 </head>
 <body>
-    <div class="loading-screen">
-        <div class="loading-spinner"></div>
+    <!-- Loading Circle -->
+    <div class="loading-circle">
+        <div class="spinner"></div>
     </div>
 
+    <!-- Back to Top Button -->
     <button id="back-to-top" class="btn-neon">↑</button>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>FULL-CYCLE GAME DEVELOPMENT COMPANY</h1>
             <p>Blending our passion for games and technology with your unique vision through expert game art and development services</p>
             <div class="banner-buttons">
                 <a href="#games" class="btn-neon smooth-scroll">OUR GAMES</a>
-                <a href="#services" class="btn-neon smooth-scroll">PRIORITIES</a>
+                <a href="#services" class="btn-neon smooth-scroll">SERVICES</a>
                 <a href="#about" class="btn-neon smooth-scroll">ABOUT US</a>
             </div>
             <a href="#contact" class="btn-neon contact-btn smooth-scroll">CONTACT US</a>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="section-dark">
         <div class="container">
-            <h2 class="section-title">WHAT MAKES US A PROMISING GAME DEVELOPMENT STUDIO</h2>
+            <h2 class="section-title">WHAT MAKES US A LEADING GAME DEVELOPMENT STUDIO</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <h3>COMMITTED LONG-TERM PARTNERSHIP</h3>
@@ -45,52 +48,80 @@
                     <h3>ADHERENCE TO SECURITY PRACTICES</h3>
                     <p>We prioritize safeguarding your data, systems, and infrastructure with strict protection policies and cutting-edge security measures.</p>
                 </div>
-                
+                <div class="feature-card">
+                    <h3>TRUSTED INDUSTRY PARTNER</h3>
+                    <p>We deliver high-quality game development services, earning recognition from top industry leaders.</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Games Section -->
     <section id="games" class="section-dark">
         <div class="container">
             <h2 class="section-title">OUR TOP-RATED PROJECTS</h2>
             <p class="section-subtitle">We create exceptional game projects recognized by top tier video game companies</p>
+            
             <div class="games-grid">
+                <!-- Game 1 -->
                 <div class="game-card">
                     <div class="game-main">
-                        <img src="images/game1.png" alt="School of Darkness" loading="lazy">
+                        <img src="images/galactic-conquest.png" alt="GALACTIC CONQUEST" loading="lazy" onerror="this.style.display='none'">
+                        <div class="game-placeholder">
+                            <h3>GALACTIC CONQUEST</h3>
+                            <p>High-level action adventure space strategy game</p>
+                        </div>
                     </div>
-                    <div class="game-content">
-                        <h3>School Of Darkness</h3>
-                        <p>Coming Soon</p>
+                    <div class="game-details">
+                        <div class="game-content">
+                            <h3>GALACTIC CONQUEST</h3>
+                            <p>High-level action adventure space strategy game</p>
+                        </div>
                         <div class="game-buttons">
                             <a href="#" class="btn-neon">VIEW PROJECT</a>
-                            <a href="https://drive.google.com/file/d/YOUR_FILE_ID_1/view" class="btn-neon" target="_blank">DOWNLOAD</a>
+                            <a href="#" class="btn-neon">DOWNLOAD</a>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Game 2 -->
                 <div class="game-card">
                     <div class="game-main">
-                        <img src="images/game2.png" alt="GunStorm Arena" loading="lazy">
+                        <img src="images/neon-racer.png" alt="NEON RACER" loading="lazy" onerror="this.style.display='none'">
+                        <div class="game-placeholder">
+                            <h3>NEON RACER</h3>
+                            <p>High-speed futuristic racing game</p>
+                        </div>
                     </div>
-                    <div class="game-content">
-                        <h3>GunStorm Arena</h3>
-                        <p>A Fast Paced Multiplayer 2d Shooter</p>
+                    <div class="game-details">
+                        <div class="game-content">
+                            <h3>NEON RACER</h3>
+                            <p>High-speed futuristic racing game</p>
+                        </div>
                         <div class="game-buttons">
                             <a href="#" class="btn-neon">VIEW PROJECT</a>
-                            <a href="https://drive.google.com/file/d/1RU7Fhs17B9EhGcclmVi6NNmhVIpcbmJ2/view?usp=sharing" class="btn-neon" target="_blank">DOWNLOAD</a>
+                            <a href="#" class="btn-neon">DOWNLOAD</a>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Game 3 -->
                 <div class="game-card">
                     <div class="game-main">
-                        <img src="images/zombie-survival.png" alt="Zombie Survival" loading="lazy">
+                        <img src="images/zombie-survival.png" alt="ZOMBIE SURVIVAL" loading="lazy" onerror="this.style.display='none'">
+                        <div class="game-placeholder">
+                            <h3>ZOMBIE SURVIVAL</h3>
+                            <p>Coming Soon</p>
+                        </div>
                     </div>
-                    <div class="game-content">
-                        <h3>10v10</h3>
-                        <p>Coming Soon</p>
+                    <div class="game-details">
+                        <div class="game-content">
+                            <h3>ZOMBIE SURVIVAL</h3>
+                            <p>Intense survival shooter game</p>
+                        </div>
                         <div class="game-buttons">
                             <a href="#" class="btn-neon">VIEW PROJECT</a>
-                            <a href="https://drive.google.com/file/d/YOUR_FILE_ID_3/view" class="btn-neon" target="_blank">DOWNLOAD</a>
+                            <a href="#" class="btn-neon">DOWNLOAD</a>
                         </div>
                     </div>
                 </div>
@@ -98,9 +129,11 @@
         </div>
     </section>
 
+    <!-- Services Section -->
     <section id="services" class="section-dark">
         <div class="container">
             <h2 class="section-title">WE FOCUS ON</h2>
+            
             <div class="services-grid">
                 <div class="service-card">
                     <h3>GAME DEVELOPMENT</h3>
@@ -121,21 +154,19 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="section-dark">
         <div class="container">
             <h2 class="section-title">FOR COMPLAINTS AND SUGGESTIONS</h2>
-            <form class="contact-form" action="https://formsubmit.co/orbitaldictators@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="New Contact Form Submission">
-                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
                 <button type="submit" class="btn-neon">SEND MESSAGE</button>
             </form>
         </div>
     </section>
 
-    <script src="Script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
