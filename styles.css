@@ -327,21 +327,7 @@ h1, h2, h3 {
         width: 100%;
     }
     
-    /* =========================================================
-   STEP 1.2 – GLOBAL GLASSMORPHISM UPGRADE
-   ========================================================= */
-
-/* Section Background */
-.section-dark {
-    background: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-
-
+    
 /* Hover Elevation */
 .feature-card:hover,
 .game-card:hover,
@@ -442,6 +428,7 @@ h1, h2, h3 {
     background-repeat: no-repeat;    /* prevent repeating */
 }
 }
+
 
 
 
