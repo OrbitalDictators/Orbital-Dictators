@@ -137,19 +137,6 @@ h1, h2, h3 {
     gap: 2rem;
 }
 
-/* GLASSMORPHISM IMPLEMENTATION */
-.feature-card, .service-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 36, 0, 0.25);
-    padding: 2rem;
-    border-radius: 14px;
-    transition: all 0.3s ease;
-    position: relative;
-    box-shadow: inset 0 0 10px rgba(255, 36, 0, 0.15), 0 0 18px rgba(255, 36, 0, 0.25);
-}
-
 .feature-card:hover, .service-card:hover {
     border-color: var(--neon-red);
     background: rgba(255, 255, 255, 0.06);
@@ -455,6 +442,7 @@ h1, h2, h3 {
     background-repeat: no-repeat;    /* prevent repeating */
 }
 }
+
 
 
 
