@@ -91,8 +91,12 @@ h1, h2, h3 {
 /* Sections */
 .section-dark {
     padding: 5rem 0;
-    background-color: rgba(10, 10, 10, 0.9);
+    background: rgba(10, 10, 10, 0.45);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 36, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 36, 0, 0.15);
     position: relative;
+    box-shadow: inset 0 0 15px rgba(255, 36, 0, 0.1);
 }
 
 .container {
@@ -133,18 +137,23 @@ h1, h2, h3 {
     gap: 2rem;
 }
 
+/* GLASSMORPHISM IMPLEMENTATION */
 .feature-card, .service-card {
-    background: rgba(20, 20, 20, 0.8);
-    border: 1px solid #333;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 36, 0, 0.25);
     padding: 2rem;
-    transition: all 0.3s;
+    border-radius: 14px;
+    transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
+    box-shadow: inset 0 0 10px rgba(255, 36, 0, 0.15), 0 0 18px rgba(255, 36, 0, 0.25);
 }
 
 .feature-card:hover, .service-card:hover {
     border-color: var(--neon-red);
-    box-shadow: var(--neon-glow-light);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: var(--neon-glow);
     transform: translateY(-5px);
 }
 
@@ -154,7 +163,7 @@ h1, h2, h3 {
     margin-top: 0;
 }
 
-/* Game Cards */
+/* Game Cards (Glass Effect Added) */
 .games-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -163,10 +172,12 @@ h1, h2, h3 {
 }
 
 .game-card {
-    background: rgba(20, 20, 20, 0.8);
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 36, 0, 0.22);
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    box-shadow: 0 0 15px rgba(255, 36, 0, 0.25);
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
@@ -174,7 +185,7 @@ h1, h2, h3 {
 
 .game-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 25px var(--neon-red);
+    box-shadow: 0 0 30px var(--neon-red);
 }
 
 .game-main {
@@ -231,9 +242,9 @@ h1, h2, h3 {
 .btn-neon {
     display: inline-block;
     padding: 12px 30px;
-    background: transparent;
-    color: var(--neon-red);
+    background: rgba(255, 255, 255, 0.05);
     border: 2px solid var(--neon-red);
+    color: var(--neon-red);
     font-family: 'Orbitron', sans-serif;
     font-size: 1rem;
     text-transform: uppercase;
@@ -241,6 +252,7 @@ h1, h2, h3 {
     text-decoration: none;
     transition: all 0.3s;
     cursor: pointer;
+    backdrop-filter: blur(6px);
     box-shadow: var(--neon-glow-light);
     white-space: nowrap;
 }
@@ -252,7 +264,7 @@ h1, h2, h3 {
     transform: translateY(-3px);
 }
 
-/* Contact Form */
+/* Contact Form (Glass Added) */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -262,16 +274,13 @@ h1, h2, h3 {
 
 .contact-form input,
 .contact-form textarea {
-    background: rgba(20, 20, 20, 0.8);
-    border: 1px solid #333;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 36, 0, 0.25);
     padding: 1rem;
     color: white;
     font-family: 'Rajdhani', sans-serif;
-}
-
-.contact-form textarea {
-    min-height: 150px;
-    resize: vertical;
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
 }
 
 /* Back to Top Button */
@@ -282,13 +291,14 @@ h1, h2, h3 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: var(--neon-red);
+    background: rgba(255, 36, 0, 0.9);
     color: white;
-    border: none;
+    border: 1px solid rgba(255, 36, 0, 0.3);
     cursor: pointer;
     display: none;
     z-index: 99;
     box-shadow: var(--neon-glow);
+    backdrop-filter: blur(8px);
     transition: all 0.3s ease;
 }
 
@@ -336,4 +346,134 @@ h1, h2, h3 {
     .game-buttons a {
         width: 100%;
     }
+    
+    /* =========================================================
+   STEP 1.2 – GLOBAL GLASSMORPHISM UPGRADE
+   ========================================================= */
+
+/* Section Background */
+.section-dark {
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Cards (Features, Games, Services) */
+.feature-card,
+.game-card,
+.service-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 20px;
+
+    transition: transform 0.3s ease, 
+                box-shadow 0.3s ease, 
+                background 0.3s ease;
+}
+
+/* Hover Elevation */
+.feature-card:hover,
+.game-card:hover,
+.service-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.12);
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* Game Cards Inner */
+.game-main img {
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Titles inside cards */
+.feature-card h3,
+.service-card h3,
+.game-content h3 {
+    color: #ffffff;
+    text-shadow: 0 0 6px rgba(255,255,255,0.5);
+}
+
+/* Make container glassy */
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* Section Title styling improvement */
+.section-title {
+    color: #fff;
+    text-shadow: 0 0 18px rgba(255,255,255,0.5);
+}
+
+/* ===== HERO GRID ANIMATION ===== */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated grid overlay */
+.hero-grid-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+
+    background: 
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px) 0 0 / 40px 40px,
+        linear-gradient(0deg, rgba(255,255,255,0.05) 1px, transparent 1px) 0 0 / 40px 40px;
+    animation: heroGridMove 15s linear infinite;
+}
+
+/* Slight tint for depth */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255,0,0,0.09), rgba(0,0,0,0.6));
+    z-index: 2;
+    pointer-events: none;
+}
+
+@keyframes heroGridMove {
+    0% {
+        transform: translateY(0px) translateX(0px);
+    }
+    100% {
+        transform: translateY(-200px) translateX(-200px);
+    }
+}
+
+/* TEST BACKGROUND IMAGE */
+#games{
+    background-image: url("images/Section Images/Testing image.jpg");
+    background-size: cover;          /* make image fill entire section */
+    background-position: center;     /* center the image */
+    background-repeat: no-repeat;    /* prevent repeating */
+}
+
+#services{
+    background-image: url("images/Section Images/Testing image.jpg");
+    background-size: cover;          /* make image fill entire section */
+    background-position: center;     /* center the image */
+    background-repeat: no-repeat;    /* prevent repeating */
+}
 }
