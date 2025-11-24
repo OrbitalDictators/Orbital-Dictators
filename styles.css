@@ -163,13 +163,6 @@ h1, h2, h3 {
     margin-top: 0;
 }
 
-/* Game Cards (Glass Effect Added) */
-.games-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
 
 .game-card {
     background: rgba(255, 255, 255, 0.04);
@@ -477,5 +470,6 @@ h1, h2, h3 {
     background-repeat: no-repeat;    /* prevent repeating */
 }
 }
+
 
 
