@@ -464,16 +464,17 @@ h1, h2, h3 {
 
 /* TEST BACKGROUND IMAGE */
 #games{
-    background-image: url("images/Section Images/Testing image.jpg");
+    background-image: url("images/Testing image.jpg");
     background-size: cover;          /* make image fill entire section */
     background-position: center;     /* center the image */
     background-repeat: no-repeat;    /* prevent repeating */
 }
 
 #services{
-    background-image: url("images/Section Images/Testing image.jpg");
+    background-image: url("images/Testing image.jpg");
     background-size: cover;          /* make image fill entire section */
     background-position: center;     /* center the image */
     background-repeat: no-repeat;    /* prevent repeating */
 }
 }
+
