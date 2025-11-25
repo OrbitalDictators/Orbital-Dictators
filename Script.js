@@ -54,3 +54,41 @@ document.querySelectorAll('.game-card').forEach(card => {
         card.style.setProperty('--glow-y', `${e.clientY - rect.top}px`);
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
+
+  if (!navToggle || !mainNav) return;
+
+  // Toggle function
+  function toggleMenu() {
+    const isOpen = mainNav.classList.toggle('open');
+    navToggle.classList.toggle('open', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    mainNav.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+
+    // Prevent body scroll when menu open (optional)
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+
+  navToggle.addEventListener('click', toggleMenu);
+
+  // Close menu when a nav link is clicked (mobile)
+  mainNav.addEventListener('click', function (e) {
+    if (e.target.classList.contains('nav-link') && mainNav.classList.contains('open')) {
+      toggleMenu();
+    }
+  });
+
+  // Close menu on Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && mainNav.classList.contains('open')) {
+      toggleMenu();
+    }
+  });
+});
