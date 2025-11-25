@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
-    
 </head>
 <body>
 
@@ -16,148 +15,145 @@
     <p> <strong>OFFICIAL SITE:</strong> https://orbitaldictators.github.io/Orbital-Dictators/ - Don't trust imitations!</p>
 </div>
 
-<style>
-    .security-banner {
-        background-color: #ff3333;
-        color: white;
-        text-align: center;
-        padding: 10px;
-        font-family: 'Rajdhani', sans-serif;
-        font-weight: 700;
-        position: relative;
-        z-index: 1000;
-    }
-    .security-banner p {
-        margin: 0;
-    }
-</style>
-    <div class="loading-screen">
-        <div class="loading-spinner"></div>
+<!-- Navigation Bar -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-logo">ORBITAL DICTATORS</div>
+
+    <!-- Desktop / mobile links container -->
+    <div class="nav-links" id="mainNav" aria-hidden="true">
+      <a href="#HeroSection" class="nav-link">HOME</a>
+      <a href="#games" class="nav-link">OUR GAMES</a>
+      <a href="#services" class="nav-link">PRIORITIES</a>
+      <a href="#about" class="nav-link">ABOUT US</a>
+      <a href="#contact" class="nav-link">CONTACT</a>
     </div>
 
-    <button id="back-to-top" class="btn-neon">↑</button>
+    <!-- Hamburger (mobile) -->
+    <button class="nav-toggle" id="navToggle" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="bar bar1"></span>
+      <span class="bar bar2"></span>
+      <span class="bar bar3"></span>
+    </button>
+  </div>
+</nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>FULL-CYCLE GAME DEVELOPMENT COMPANY</h1>
-            <p>Blending our passion for games and technology with your unique vision through expert game art and development services</p>
-            <div class="banner-buttons">
-                <a href="#games" class="btn-neon smooth-scroll">OUR GAMES</a>
-                <a href="#services" class="btn-neon smooth-scroll">PRIORITIES</a>
-                <a href="#about" class="btn-neon smooth-scroll">ABOUT US</a>
+<div class="loading-screen">
+    <div class="loading-spinner"></div>
+</div>
+
+<button id="back-to-top" class="btn-neon">↑</button>
+
+<section id="HeroSection" class="hero">
+    <div class="hero-content">
+        <h1>FULL-CYCLE GAME DEVELOPMENT COMPANY</h1>
+        <p>Blending our passion for games and technology with your unique vision through expert game art and development services</p>
+    </div>
+</section>
+
+<section id="about" class="section-dark">
+    <div class="container">
+        <h2 class="section-title">WHAT MAKES US A PROMISING GAME DEVELOPMENT STUDIO</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>FULLY DEDICATED TO GAME DEVELOPMENT </h3>
+                <p>With years of experience in game development, we have always dedicated ourselves to our work and provide high quality gameplay experience.</p>
             </div>
-            <a href="#contact" class="btn-neon contact-btn smooth-scroll">CONTACT US</a>
-        </div>
-    </section>
-
-    <section id="about" class="section-dark">
-        <div class="container">
-            <h2 class="section-title">WHAT MAKES US A PROMISING GAME DEVELOPMENT STUDIO</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>FULLY DEDICATED TO GAME DEVELOPMENT </h3>
-                    <p>With years of experience in game development, we have always dedicated ourselves to our work and provide high quality gameplay experience.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>CUSTOMIZED FULL-CYCLE DEVELOPMENT</h3>
-                    <p>Each team is carefully assembled with specialists who excel in specific genres and artistic styles required for your project.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>ADHERENCE TO SECURITY PRACTICES</h3>
-                    <p>We prioritize safeguarding your data, systems, and infrastructure with strict protection policies and cutting-edge security measures.</p>
-                </div>
-                
+            <div class="feature-card">
+                <h3>CUSTOMIZED FULL-CYCLE DEVELOPMENT</h3>
+                <p>Each team is carefully assembled with specialists who excel in specific genres and artistic styles required for your project.</p>
+            </div>
+            <div class="feature-card">
+                <h3>ADHERENCE TO SECURITY PRACTICES</h3>
+                <p>We prioritize safeguarding your data, systems, and infrastructure with strict protection policies and cutting-edge security measures.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="games" class="section-dark">
-        <div class="container">
-            <h2 class="section-title">OUR TOP-RATED PROJECTS</h2>
-            <p class="section-subtitle">We create exceptional game projects recognized by top tier video game companies</p>
-            <div class="games-grid">
-                <div class="game-card">
-                    <div class="game-main">
-                        <img src="images/game1.png" alt="School of Darkness" loading="lazy">
-                    </div>
-                    <div class="game-content">
-                        <h3>School Of Darkness</h3>
-                        <p>Coming Soon</p>
-                        <div class="game-buttons">
-                            <a href="ViewProjects/SchoolOfDarkness.html" class="btn-neon">VIEW PROJECT</a>
-                            <a href="https://drive.google.com/file/d/YOUR_FILE_ID_1/view" class="btn-neon" target="_blank">DOWNLOAD</a>
-                        </div>
-                    </div>
+<section id="games" class="section-dark">
+    <div class="container">
+        <h2 class="section-title">OUR TOP-RATED PROJECTS</h2>
+        <p class="section-subtitle">We create exceptional game projects recognized by top tier video game companies</p>
+        <div class="games-grid">
+            <div class="game-card">
+                <div class="game-main">
+                    <img src="images/game1.png" alt="School of Darkness" loading="lazy">
                 </div>
-                <div class="game-card">
-                    <div class="game-main">
-                        <img src="images/game2.png" alt="GunStorm Arena" loading="lazy">
-                    </div>
-                    <div class="game-content">
-                        <h3>GunStorm Arena</h3>
-                        <p>A Fast Paced Multiplayer 2d Shooter</p>
-                        <div class="game-buttons">
-                            <a href="ViewProjects/GunStormArena.html" class="btn-neon">VIEW PROJECT</a>
-                            <a href="https://drive.google.com/file/d/1RU7Fhs17B9EhGcclmVi6NNmhVIpcbmJ2/view?usp=sharing" class="btn-neon" target="_blank">DOWNLOAD</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div class="game-main">
-                        <img src="images/zombie-survival.png" alt="Zombie Survival" loading="lazy">
-                    </div>
-                    <div class="game-content">
-                        <h3>10v10</h3>
-                        <p>Coming Soon</p>
-                        <div class="game-buttons">
-                            <a href="ViewProjects/10v10.html" class="btn-neon">VIEW PROJECT</a>
-                            <a href="https://drive.google.com/file/d/YOUR_FILE_ID_3/view" class="btn-neon" target="_blank">DOWNLOAD</a>
-                        </div>
+                <div class="game-content">
+                    <h3>School Of Darkness</h3>
+                    <p>Coming Soon</p>
+                    <div class="game-buttons">
+                        <a href="ViewProjects/SchoolOfDarkness.html" class="btn-neon">VIEW PROJECT</a>
+                        <a href="https://drive.google.com/file/d/YOUR_FILE_ID_1/view" class="btn-neon" target="_blank">DOWNLOAD</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="services" class="section-dark">
-        <div class="container">
-            <h2 class="section-title">WE FOCUS ON</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>GAME DEVELOPMENT</h3>
-                    <p>From concept to launch, we specialize in creating engaging and visually stunning game experiences across all genres.</p>
-                    
+            <div class="game-card">
+                <div class="game-main">
+                    <img src="images/game2.png" alt="GunStorm Arena" loading="lazy">
                 </div>
-                <div class="service-card">
-                    <h3>GAME ART</h3>
-                    <p>We develop and display the most thrilling gaming worlds with exceptional artwork recognized by industry leaders.</p>
-                    
+                <div class="game-content">
+                    <h3>GunStorm Arena</h3>
+                    <p>A Fast Paced Multiplayer 2d Shooter</p>
+                    <div class="game-buttons">
+                        <a href="ViewProjects/GunStormArena.html" class="btn-neon">VIEW PROJECT</a>
+                        <a href="https://drive.google.com/file/d/1RU7Fhs17B9EhGcclmVi6NNmhVIpcbmJ2/view?usp=sharing" class="btn-neon" target="_blank">DOWNLOAD</a>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <h3>GAME 3D MODELS</h3>
-                    <p>We create smooth, expressive, and technically polished models for characters and environments.</p>
-                    
+            </div>
+            <div class="game-card">
+                <div class="game-main">
+                    <img src="images/zombie-survival.png" alt="Zombie Survival" loading="lazy">
+                </div>
+                <div class="game-content">
+                    <h3>10v10</h3>
+                    <p>Coming Soon</p>
+                    <div class="game-buttons">
+                        <a href="ViewProjects/10v10.html" class="btn-neon">VIEW PROJECT</a>
+                        <a href="https://drive.google.com/file/d/YOUR_FILE_ID_3/view" class="btn-neon" target="_blank">DOWNLOAD</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="contact" class="section-dark">
-        <div class="container">
-            <h2 class="section-title">FOR COMPLAINTS AND SUGGESTIONS</h2>
-            <form class="contact-form" action="https://formsubmit.co/orbitaldictators@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="New Contact Form Submission">
-                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn-neon">SEND MESSAGE</button>
-            </form>
+<section id="services" class="section-dark">
+    <div class="container">
+        <h2 class="section-title">WE FOCUS ON</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>GAME DEVELOPMENT</h3>
+                <p>From concept to launch, we specialize in creating engaging and visually stunning game experiences across all genres.</p>
+            </div>
+            <div class="service-card">
+                <h3>GAME ART</h3>
+                <p>We develop and display the most thrilling gaming worlds with exceptional artwork recognized by industry leaders.</p>
+            </div>
+            <div class="service-card">
+                <h3>GAME 3D MODELS</h3>
+                <p>We create smooth, expressive, and technically polished models for characters and environments.</p>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <script src="Script.js"></script>
-    
+<section id="contact" class="section-dark">
+    <div class="container">
+        <h2 class="section-title">FOR COMPLAINTS AND SUGGESTIONS</h2>
+        <form class="contact-form" action="https://formsubmit.co/orbitaldictators@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Contact Form Submission">
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn-neon">SEND MESSAGE</button>
+        </form>
+    </div>
+</section>
+
+<script src="Script.js"></script>
+
 </body>
 </html>
-
