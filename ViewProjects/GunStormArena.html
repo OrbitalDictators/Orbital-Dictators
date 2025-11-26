@@ -168,6 +168,42 @@ nav .logo {
             opacity: 0.8;
             font-weight: normal;
         }
+        
+        .legal-section {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--accent-red);
+    padding: 30px 20px;
+    margin-top: 60px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.legal-section h2 {
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+
+.legal-section p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid var(--accent-red);
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-size: 0.9rem;
+    color: var(--accent-red);
+    margin-top: 0;
+}
     </style>
 </head>
 <body>
@@ -278,6 +314,31 @@ survival</p>
             </div>
         </section>
     </div>
+    
+    <section class="social-section">
+    
+    <div class="social-buttons">
+        <a href="https://www.youtube.com/@OrbitalDictators" class="social-btn youtube"><img src="images/youtube.png" alt="YouTube"></a>
+        <a href="https://discord.gg/aKs7XKpK3r" class="social-btn discord"><img src="images/discord.png" alt="Discord"></a>
+        <a href="https://www.instagram.com/orbital_dictators?igsh=ZHYxOTdoNmFibXJj" class="social-btn instagram"><img src="images/instagram.png" alt="Instagram"></a>
+    </div>
+</section>
+    
+    <!-- Copyright / Legal Section -->
+<section class="legal-section">
+    <h2>COPYRIGHT NOTICE</h2>
+    <p>
+        All games, artwork, code, screenshots, sound effects, and branding used on this website 
+        are © Orbital Dictators. Unauthorized use, distribution, or reproduction of any content 
+        is strictly prohibited and may result in legal action.
+        <br><br>
+        Google Fonts and starter templates used in development belong to their respective owners.
+    </p>
+</section>
+
+<footer>
+    <p>© 2025 Orbital Dictators • All Rights Reserved</p>
+</footer>
 
     <script>
         // Auto-update date
