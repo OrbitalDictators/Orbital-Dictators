@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -204,6 +204,62 @@ footer {
     color: var(--accent-red);
     margin-top: 0;
 }
+
+/* ---------- ADDED: Social section styles ---------- */
+.social-section {
+    margin: 0; /* remove default section margins so it sits flush with neighbors */
+    padding: 28px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent; /* keep visual continuity with page */
+}
+
+.social-buttons {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* anchor wrapper for icon */
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-decoration: none;
+    border: 2px solid #000; /* black stroke */
+    background: rgba(0,0,0,0.15);
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    box-shadow: 0 0 10px rgba(255,255,255,0.4); /* white glow */
+}
+
+.social-btn:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 0 18px rgba(255,255,255,0.9); /* stronger white glow */
+    border-color: #000; /* keep stroke black */
+}
+
+/* image inside button */
+.social-btn img {
+    width: 28px;   /* recommended 48x48 icon scaled down */
+    height: 28px;
+    object-fit: contain;
+    display: block;
+    filter: none; /* keep original colors; remove if you want monochrome */
+}
+
+/* smaller screens: tighten spacing */
+@media (max-width: 480px) {
+    .social-section { padding: 18px 10px; }
+    .social-btn { width: 48px; height: 48px; }
+    .social-btn img { width: 22px; height: 22px; }
+}
     </style>
 </head>
 <body>
@@ -318,9 +374,9 @@ survival</p>
     <section class="social-section">
     
     <div class="social-buttons">
-        <a href="https://www.youtube.com/@OrbitalDictators" class="social-btn youtube"><img src="images/youtube.png" alt="YouTube"></a>
-        <a href="https://discord.gg/aKs7XKpK3r" class="social-btn discord"><img src="images/discord.png" alt="Discord"></a>
-        <a href="https://www.instagram.com/orbital_dictators?igsh=ZHYxOTdoNmFibXJj" class="social-btn instagram"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com/@OrbitalDictators" class="social-btn youtube" target="_blank"><img src="images/youtube.png" alt="YouTube"></a>
+        <a href="https://discord.gg/aKs7XKpK3r" class="social-btn discord" target="_blank"><img src="images/discord.png" alt="Discord"></a>
+        <a href="https://www.instagram.com/orbital_dictators?igsh=ZHYxOTdoNmFibXJj" class="social-btn instagram" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
     </div>
 </section>
     
@@ -371,4 +427,3 @@ document.addEventListener('DOMContentLoaded', function() {
     </script>
 </body>
 </html>
-
