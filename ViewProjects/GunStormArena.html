@@ -14,23 +14,24 @@
         }
         
         nav {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    background-color: var(--bg-dark);
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--accent-red);
-    padding: 10px 30px;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(179, 231, 146, 0.15);
+    padding: 8px 20px;
+    z-index: 9999;
 }
-
 nav .logo {
     font-family: 'Russo One', sans-serif;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: var(--accent-red);
-    letter-spacing: 2px;
     text-transform: uppercase;
+    margin-left: 0;   /* removes space */
 }
         body {
             background-color: var(--bg-dark);
@@ -246,3 +247,4 @@ nav .logo {
     </script>
 </body>
 </html>
+
