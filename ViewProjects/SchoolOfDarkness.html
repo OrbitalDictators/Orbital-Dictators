@@ -164,6 +164,103 @@ nav .logo {
             color: var(--accent-red);
             font-weight: 600;
         }
+        
+        /* Social Section */
+.social-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.social-btn {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+    border: 2px solid var(--accent-red);
+    border-radius: 50%;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 0 0 10px rgba(255,255,255,0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Grunge crack effect */
+.social-btn::after {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: url('https://i.imgur.com/1OHpG3W.png');
+    opacity: 0.08;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+
+.social-btn img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1) drop-shadow(0 0 3px rgba(255,255,255,0.4));
+    transition: 0.3s ease;
+}
+
+/* Hover horror effect */
+.social-btn:hover {
+    background: var(--accent-red);
+    border-color: var(--accent-red);
+    transform: scale(1.15) rotate(-3deg);
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
+}
+
+.social-btn:hover img {
+    filter: brightness(0) drop-shadow(0 0 6px rgba(0,0,0,0.9));
+}
+        
+        /* Copyright Section */
+.copyright-section {
+    margin-top: 60px;
+    padding: 40px 20px;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--accent-red);
+    border-bottom: 1px solid var(--accent-red);
+    text-align: center;
+}
+
+.copyright-section h2 {
+    margin-bottom: 15px;
+}
+
+.copyright-section p {
+    max-width: 900px;
+    margin: 0 auto 10px;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--accent-red);
+    margin-top: 20px;
+}
     </style>
 </head>
 <body>
@@ -278,6 +375,32 @@ nav .logo {
             </div>
         </section>
     </div>
+    
+    <section class="social-section">
+    
+    <div class="social-buttons">
+        <a href="https://www.youtube.com/@OrbitalDictators" class="social-btn youtube"><img src="images/youtube.png" alt="YouTube"></a>
+        <a href="https://discord.gg/aKs7XKpK3r" class="social-btn discord"><img src="images/discord.png" alt="Discord"></a>
+        <a href="https://www.instagram.com/orbital_dictators?igsh=ZHYxOTdoNmFibXJj" class="social-btn instagram"><img src="images/instagram.png" alt="Instagram"></a>
+    </div>
+</section>
+    
+    <!-- Copyright Section -->
+<section class="copyright-section">
+    <h2>COPYRIGHT NOTICE</h2>
+    <p>
+        All games, artwork, code, screenshots, sound effects, and branding used on this website 
+        are © Orbital Dictators. Unauthorized use, distribution, or reproduction of any content 
+        is strictly prohibited and may result in legal action.
+        <br><br>
+        Google Fonts and starter templates used in development belong to their respective owners.
+    </p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 ORBITAL DICTATORS | All Rights Reserved</p>
+</footer>
 
     <script>
         // Simple download counter (replace with server-side code later)
