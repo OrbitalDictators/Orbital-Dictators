@@ -12,6 +12,27 @@
             --accent-red: #000000;
             --text-light: #E40046;
         }
+        
+        nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--accent-red);
+    padding: 8px 20px;
+    z-index: 9999;
+}
+nav .logo {
+    font-family: 'Audiowide', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--accent-red);
+    text-transform: uppercase;
+    margin-left: 0;   /* removes space */
+}
         body {
             background-color: var(--bg-dark);
             color: var(--text-light);
@@ -110,6 +131,10 @@
     </style>
 </head>
 <body>
+	
+	<nav>
+    <div class="logo">ORBITAL DICTATORS</div>
+</nav>
     <div class="container">
         <header>
             <h1>DRIFTERS</h1>
