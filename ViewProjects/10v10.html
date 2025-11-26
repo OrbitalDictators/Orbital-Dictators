@@ -168,6 +168,112 @@ nav .logo {
             opacity: 0.8;
             font-weight: normal;
         }
+        
+        /* Copyright Section */
+.copyright-section {
+    margin-top: 60px;
+    padding: 40px 20px;
+    background: rgba(0,0,0,0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--accent-red);
+    border-bottom: 1px solid var(--accent-red);
+    text-align: center;
+}
+
+.copyright-section h2 {
+    margin-bottom: 15px;
+    color: var(--accent-red);
+    text-transform: uppercase;
+}
+
+.copyright-section p {
+    max-width: 900px;
+    margin: 0 auto 10px;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+/* Social Section */
+.social-section {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Futuristic Neon Buttons */
+.social-btn {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--accent-red);
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 0 15px rgba(228,0,70,0.4);
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hologram Ring Glow */
+.social-btn::before {
+    content: "";
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    border-radius: 50%;
+    border: 2px solid rgba(228,0,70,0.4);
+    box-shadow: 0 0 25px rgba(228,0,70,0.6);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* Icon */
+.social-btn img {
+    width: 35px;
+    height: 35px;
+    filter: brightness(0) invert(0);
+    transition: 0.3s ease;
+}
+
+/* Hover Effects */
+.social-btn:hover {
+    transform: scale(1.2);
+    background: var(--accent-red);
+    box-shadow: 0 0 25px rgba(228,0,70,1);
+    border-color: var(--accent-red);
+}
+
+.social-btn:hover::before {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.social-btn:hover img {
+    filter: brightness(0);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    background: rgba(0,0,0,0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--accent-red);
+    margin-top: 20px;
+    color: var(--accent-red);
+}
     </style>
 </head>
 <body>
@@ -270,6 +376,32 @@ nav .logo {
             </div>
         </section>
     </div>
+    
+    <section class="social-section">
+    
+    <div class="social-buttons">
+        <a href="https://www.youtube.com/@OrbitalDictators" class="social-btn youtube"><img src="images/youtube.png" alt="YouTube"></a>
+        <a href="https://discord.gg/aKs7XKpK3r" class="social-btn discord"><img src="images/discord.png" alt="Discord"></a>
+        <a href="https://www.instagram.com/orbital_dictators?igsh=ZHYxOTdoNmFibXJj" class="social-btn instagram"><img src="images/instagram.png" alt="Instagram"></a>
+    </div>
+</section>
+    
+    <!-- Copyright Section -->
+<section class="copyright-section">
+    <h2>COPYRIGHT NOTICE</h2>
+    <p>
+        All games, artwork, code, screenshots, sound effects, and branding used on this website 
+        are © Orbital Dictators. Unauthorized use, distribution, or reproduction of any content 
+        is strictly prohibited and may result in legal action.
+        <br><br>
+        Google Fonts and starter templates used in development belong to their respective owners.
+    </p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 ORBITAL DICTATORS | All Rights Reserved</p>
+</footer>
 
     <script>
         // Auto-update date
