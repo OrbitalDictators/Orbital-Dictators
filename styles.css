@@ -607,16 +607,81 @@ h1, h2, h3 {
   box-shadow: 0 0 10px rgba(255,36,0,0.12);
 }
 
+.copyright-section {
+   
+    padding: 30px 20px;
+    border-top: 1px solid var(--accent-red);
+    text-align: center;
+    background: rgba(0, 0, 0, 1);
+    backdrop-filter: blur(5px);
+}
+
+.copyright-section h2 {
+    color: var(--accent-red);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.copyright-section p {
+    max-width: 900px;
+    margin: 10px auto;
+    font-size: 0.95rem;
+    opacity: 1;
+}
+.social-section {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.social-title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+.social-btn img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1) drop-shadow(0 0 3px rgba(255,255,255,0.4));
+    transition: 0.3s ease;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid rgba(255, 255, 255, 0);
+    transition: 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.social-btn:hover {
+    transform: scale(1.1);
+    border-color: #E40046;
+    box-shadow: 0 0 10px #E40046;
+}
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.85rem;
+    opacity: 1;
+}
 
 #services {
-    background-image: url("images//Section Images/Testing images.jpg");
+    background-image: url("images//Sction Images/Testing images.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 #about {
-    background-image: url("images//Section Images/Testing images.jpg");
+    background-image: url("images//Sction Images/Testing images.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
