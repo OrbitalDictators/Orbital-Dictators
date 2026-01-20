@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="10v10assets/favicon.png" type="image/png">
+    <link rel="icon" href="10v10assets/logo.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DRIFTERS | Orbital Dictators</title>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
@@ -60,18 +60,47 @@ body.loaded .loading-screen {
     width: 100%;
     background: rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--accent-red);
     padding: 8px 20px;
     z-index: 9998;
 }
-nav .logo {
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 14px; /* space between text and logo */
+}
+
+.logo-text {
     font-family: 'Audiowide', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
     color: var(--accent-red);
     text-transform: uppercase;
-    margin-left: 0;   /* removes space */
+    text-decoration: none;
+}
+
+.logo-text:hover {
+    opacity: 0.85;
+}
+
+.nav-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    pointer-events: none; /* prevents accidental click handling */
+}
+nav .logo {
+    font-family: 'RUSSO ONE', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--accent-red);
+    text-transform: uppercase;
+    margin-left: 0;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px; /* space between text and logo */
 }
         body {
             background-color: var(--bg-dark);
@@ -169,6 +198,219 @@ nav .logo {
             font-weight: normal;
         }
         
+        .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- PEGI REVEAL ANIMATION ---------- */
+
+.pegi-reveal {
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.pegi-reveal.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Rating cards initial state */
+.pegi-reveal .rating-card {
+    opacity: 0;
+    transform: scale(0.7) rotate(-6deg);
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s cubic-bezier(.22,1.2,.36,1);
+}
+
+/* When section activates */
+.pegi-reveal.active .rating-card {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+/* Stagger effect */
+.pegi-reveal.active .rating-card:nth-child(1) {
+    transition-delay: 0.15s;
+}
+
+.pegi-reveal.active .rating-card:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+.pegi-reveal.active .rating-card:nth-child(3) {
+    transition-delay: 0.45s;
+}
+        
+        /* ---------- INFO SECTIONS (Available On + Content Info) ---------- */
+
+.info-section {
+    margin: 40px 0;
+    padding: 20px;
+    background: rgba(0,0,0,0.12);
+    border-left: 4px solid var(--accent-red);
+}
+
+
+.info-section.content-rating {
+    background: rgba(0, 0, 0, 0);
+    border-left: 0px solid var(--accent-red);
+    padding: 24px;
+}
+
+.info-section h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1.6rem;
+    color: var(--accent-red);
+}
+
+/* Platform cards */
+.info-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    border: 2px solid var(--accent-red);
+    background: rgba(255,255,255,0.08);
+    color: var(--text-light);
+    font-size: 1rem;
+    min-width: 200px;
+}
+
+.info-card img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.info-card small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Muted / Coming Soon */
+.info-card.muted {
+    opacity: 0.6;
+}
+
+/* Content list */
+.content-list {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.content-list li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ---------- SYSTEM REQUIREMENTS ---------- */
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.requirement-card {
+    background: rgba(0,0,0,0.15);
+    border: 2px solid var(--accent-red);
+    padding: 18px;
+    color: var(--text-light);
+}
+
+.requirement-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: var(--accent-red);
+    font-size: 1.2rem;
+}
+
+.requirement-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.requirement-card li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+        
+/* ---------- PEGI STYLE CONTENT SECTION ---------- */
+
+.rating-grid {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; /* FORCE horizontal layout */
+}
+
+.rating-card {
+    background: #2a2a2a;
+    border-radius: 16px;
+    padding: 20px;
+    width: 140px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.rating-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+@media (max-width: 600px) {
+    .rating-card {
+        width: 100px;
+        height: 80px;
+        padding: 12px;
+    }
+}
+        
+          /* Easter Eggs Section */
+        .easter-section {
+    background: rgba(0,0,0,0);
+   /* border-left: 4px solid var(--accent-red);*/
+    padding: 15px 20px;
+    margin: 30px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-light);
+}
+.easter-section h2 {
+    font-size: 1.6rem;
+    color: var(--accent-red);
+    margin-bottom: 10px;
+}
+.easter-section p {
+    opacity: 0.85;
+}
+
         /* Copyright Section */
 .copyright-section {
     margin-top: 60px;
@@ -280,23 +522,37 @@ footer {
 	<div class="loading-screen">
     <div class="loading-spinner"></div>
 </div>
-	<nav>
-    <div class="logo">ORBITAL DICTATORS</div>
+<nav>
+    <div class="nav-left">
+        <a href="../index.html" class="logo-text">ORBITAL DICTATORS</a>
+        <img src="10v10assets/logo.png" alt="Game Logo" class="nav-logo">
+    </div>
 </nav>
     <div class="container">
         <header>
             <h1>DRIFTERS</h1>
             <p>WELCOME TO THE FUTURE WHERE TIME BURNS AND CARS DECIDE THE SURVIVAL</p>
             <a href="https://drive.google.com/file/d/YOUR_FILE_ID_3/view" class="btn-neon" target="_blank">DOWNLOAD</a>
-            <div class="download-counter">Total Downloads: <span id="downloadCount">0</span></div>
+            <div class="download-counter">Total Downloads: <span id="downloadCount">2,589</span></div>
         </header>
+
+<!-- Available On Section -->
+<section class="info-section">
+    <h2>AVAILABLE ON</h2>
+    <div class="info-cards">
+        <div class="info-card">
+            <img src="images/android.png" alt="Android">
+            <span>ANDROID</span>
+        </div>
+    </div>
+</section>
 
         <!-- Story Section -->
         <section class="story-section">
             <h2>THE STORY</h2>
             <p>IN THE YEAR 2149, TRADITIONAL RACING HAS BECOME OBSOLETE. AFTER THE DISCOVERY OF THE HYPER CIRCUIT, A DIMENSIONAL NETWORK OF FLOATING RACE TRACKS POWERED BY DARK-ENERGY REACTORS, CORPORATIONS NOW HOST DEADLY RACES BROADCAST ACROSS THE GALAXY. DRIVERS, KNOWN AS DRIFTERS, LINK THEIR NEURAL SYSTEM DIRECTLY TO THEIR VEHICLES—EVERY TURN, EVERY BOOST, EVERY CRASH IS FELT IN THEIR BODIES.</p>
             
-            <div class="screenshot-gallery">
+            <div class="screenshot-gallery reveal">
                 <img 
             src="10v10assets/zombie-survival.png" 
             alt="Game Screenshot"
@@ -315,7 +571,7 @@ footer {
         <!-- Gameplay Screenshots -->
         <section>
             <h2>GAMEPLAY</h2>
-            <div class="screenshot-gallery">
+            <div class="screenshot-gallery reveal">
                              <img 
             src="10v10assets/zombie-survival.png" 
             alt="Game Screenshot"
@@ -337,6 +593,9 @@ footer {
             </div>
         </section>
 
+
+
+
         <!-- Update Section -->
         <section class="whats-new-section">
             <h2>LATEST UPDATE <small id="currentDate"></small></h2>
@@ -354,7 +613,7 @@ footer {
         <!-- Development Journey -->
         <section>
             <h2>DEVELOPMENT JOURNEY</h2>
-            <div class="screenshot-gallery">
+            <div class="screenshot-gallery reveal">
                         <img 
             src="10v10assets/zombie-survival.png" 
             alt="Game Screenshot"
@@ -377,11 +636,52 @@ footer {
         </section>
     </div>
     
-    <section class="social-section">
+<!-- PEGI / CONTENT RATING -->
+<section class="info-section content-rating pegi-reveal">
+    <h2>CONTENT INFORMATION</h2>
+
+    <div class="rating-grid">
+        <div class="rating-card age">
+            <img src="10v10assets/logo.png" alt="PEGI 16">
+        </div>
+
+        <div class="rating-card">
+            <img src="10v10assets/logo.png" alt="Violence">
+        </div>
+
+        <div class="rating-card">
+            <img src="10v10assets/logo.png" alt="In-Game Purchases">
+        </div>
+    </div>
+</section>
+
+    <!-- System Requirements Section -->
+    <section class="info-section content-rating">
+    <h2>System Requirements</h2>
+
+    <div class="requirements-grid">
+        <div class="requirement-card">
+            <h3>Recommended</h3>
+            <ul>
+                <li><strong>OS:</strong>°</li>
+                <li><strong>RAM:</strong>°</li>
+                <li><strong>Storage:</strong>°</li>
+            </ul>
+        </div>
+    </div>
+</section>
     
+    <!-- Easter Eggs Section -->
+    <section class="easter-section">
+    <h2>Easter Eggs</h2>
+    <p>° Do you know? The kids in the School of Darkness are also some of the high level drifters in the modern era.</p>
+</section>
+    
+     <!-- Social Section -->
+    <section class="social-section">
     <div class="social-buttons">
         <a href="https://www.youtube.com/@OrbitalDictators" class="social-btn youtube"><img src="images/youtube.png" alt="YouTube"></a>
-        <a href="https://discord.gg/aKs7XKpK3r" class="social-btn discord"><img src="images/discord.png" alt="Discord"></a>
+        <a href="https://discord.gg/T5ZQmS2ex5" class="social-btn discord"><img src="images/discord.png" alt="Discord"></a>
         <a href="https://www.instagram.com/orbital_dictators?igsh=ZHYxOTdoNmFibXJj" class="social-btn instagram"><img src="images/instagram.png" alt="Instagram"></a>
     </div>
 </section>
@@ -411,9 +711,38 @@ footer {
             day: 'numeric' 
         });
         
-        // Download counter
-        let count = 0;
-        document.getElementById('downloadCount').textContent = count.toLocaleString();
+      const targetCount = 3423 ; // your real download count
+    const duration = 1000; // EXACT duration in ms (2 seconds)
+
+    function animateDownloadCounter() {
+        const counter = document.getElementById('downloadCount');
+        const startTime = performance.now();
+
+        function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const rawProgress = Math.min(elapsed / duration, 1);
+const progress = 1 - Math.pow(1 - rawProgress, 3); // ease-out
+            const value = Math.floor(progress * targetCount);
+
+            counter.textContent = value.toLocaleString();
+
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            } else {
+                counter.textContent = targetCount.toLocaleString(); // ensure final value
+            }
+        }
+
+        requestAnimationFrame(update);
+    }
+
+    // Trigger AFTER loading screen finishes
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            animateDownloadCounter();
+        }, 1500); // same delay as loading screen
+    });
+    
         // Loading Screen Functionality (Simplified - no asset waiting)
 document.addEventListener('DOMContentLoaded', function() {
     const loadingScreen = document.querySelector('.loading-screen');
@@ -430,7 +759,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500); // Fade-out duration
     }, 1500);
 });
+
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15 });
+
+reveals.forEach(el => observer.observe(el));
+
+const pegiSection = document.querySelector('.pegi-reveal');
+
+if (pegiSection) {
+    const pegiObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                pegiObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.4 });
+
+    pegiObserver.observe(pegiSection);
+}
     </script>
 </body>
 </html>
-
