@@ -672,51 +672,7 @@ h1, h2, h3 {
     font-size: 0.85rem;
     opacity: 1;
 }
-
-#services {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-/* Desktop image */
-@media (min-width: 1024px) {
-    #services {
-    	height: 720px;
-        background-image: url("images/Section Images/Testing images.jpeg");
-    }
-}
-
-/* Mobile image */
-@media (max-width: 1023px) {
-    #services {
-    	height: 720px;
-        background-image: url("images/Section Images/Testing images.jpeg");
-    }
-}
-
-#games {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-/* Desktop image */
-@media (min-width: 1024px) {
-    #games {
-    	height: 720px;
-        background-image: url("images/Section Images/Testing images.jpeg");
-    }
-}
-
-/* Mobile image */
-@media (max-width: 1023px) {
-    #games {
-    	height: 720px;
-        background-image: url("images/Section Images/Testing images.jpeg");
-    }
-}
-
 html {
   scroll-behavior: smooth;
 }
+
