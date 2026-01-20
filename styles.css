@@ -438,8 +438,8 @@ h1, h2, h3 {
     bottom: -4px;
     width: 0%;
     height: 2px;
-    background: #00ffff;
-    box-shadow: 0 0 8px #00ffff;
+    background: #ff3c3c; /* logo red */
+    box-shadow: 0 0 8px rgba(255, 60, 60, 0.6);
     transition: 0.3s ease;
 }
 
@@ -674,17 +674,47 @@ h1, h2, h3 {
 }
 
 #services {
-    background-image: url("images//Sction Images/Testing images.jpg");
-    background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-#about {
-    background-image: url("images//Sction Images/Testing images.jpg");
-    background-size: cover;
-    background-position: center;
+/* Desktop image */
+@media (min-width: 1024px) {
+    #services {
+    	height: 720px;
+        background-image: url("images/Section Images/Testing images.jpeg");
+    }
+}
+
+/* Mobile image */
+@media (max-width: 1023px) {
+    #services {
+    	height: 720px;
+        background-image: url("images/Section Images/Testing images.jpeg");
+    }
+}
+
+#games {
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Desktop image */
+@media (min-width: 1024px) {
+    #games {
+    	height: 720px;
+        background-image: url("images/Section Images/Testing images.jpeg");
+    }
+}
+
+/* Mobile image */
+@media (max-width: 1023px) {
+    #games {
+    	height: 720px;
+        background-image: url("images/Section Images/Testing images.jpeg");
+    }
 }
 
 html {
