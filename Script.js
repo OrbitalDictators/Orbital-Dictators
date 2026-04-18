@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
       toggleMenu();
     }
   });
+  
 
   // Close menu on Escape key
   document.addEventListener('keydown', function (e) {
